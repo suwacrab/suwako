@@ -1,5 +1,5 @@
 # compiler shit
-CC = clang
+CC = gcc
 INCLUDE = -I. -I./src
 LIBS = -lm
 # obj shit
