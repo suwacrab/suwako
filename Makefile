@@ -3,7 +3,7 @@ CC = gcc
 INCLUDE = -I. -I./src
 LIBS = -lm
 # obj shit
-OBJS := src/main.o src/suwa_obj.o
+OBJS := src/main.o src/kanako.o
 NAME = pool.out
 
 %.o: %.c
