@@ -6,6 +6,7 @@ kanako *kanako_init(kanako *yasa,suwako *objs,u16 len)
 	yasa->objs = objs;
 	yasa->len = len;
 	yasa->first = 0x0000;
+	printf("suwako size: $%04lX[$%04X]\n",sizeof(suwako),len);
 	printf("kanako size: $%04lX\n",sizeof(suwako) * len);
 	// set next objs
 	for(u32 i=0; i<len; i++)

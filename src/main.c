@@ -17,7 +17,6 @@ gmem *gram = (gmem*)fcmem;
 
 int main(void)
 {
-	printf("suwako size: $%04lX\n",sizeof(suwako));
 	kanako *suwa_pool = kanako_init(&gram->suwa_pool,gram->objlist,0x400);
 	for(u32 i=0; i<4; i++) printf("objs[%d]: %p\n",i,&suwa_pool->objs[i]);
 
