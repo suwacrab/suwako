@@ -3,24 +3,23 @@
 #include "kbase.h"
 #include "suwako.h"
 #include "kanako.h"
-
 /*	--	game	--	*/
 typedef struct gmem 
 {
-	kanako suwa_pool;
-	suwako objlist[0x400];
+	kanako suwa;
+	suwako objlist[0x100];
 } gmem;
 
 /*	--	vars	--	*/
-u8 fcmem[ MBSIZE(4) ];
+u8 fcmem[ KBSIZE(8) ];
 gmem *gram = NULL;
 
 int main(void)
 {
 	// init
 	gram = (gmem*)fcmem;
-	kanako *suwa_pool = kanako_init(&gram->suwa_pool,gram->objlist,0x400);
+	kanako *suwa = kanako_init(&gram->suwa,gram->objlist,0x100);
 	// main
-	for(u32 i=0; i<4; i++) printf("objs[%d]: %p\n",i,&suwa_pool->objs[i]);
+	for(u32 i=0; i<4; i++) printf("objs[%d]: %p\n",i,&suwa->objs[i]);
 }
 

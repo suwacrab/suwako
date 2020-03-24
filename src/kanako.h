@@ -8,13 +8,13 @@
 typedef struct kanako 
 {
 	suwako *objs;
-	u16 first,len;
+	uint16_t first,len,alive;
 } kanako;
 
 /*	--	yasa funcs	--	*/
 kanako *kanako_init(kanako *yasa,suwako *objs,u16 len);
-suwako *kanako_add(kanako *yasa);
-void kanako_updt(kanako *yasa);
+suwako *kanako_add(kanako *yasa,u16 mode);
+void kanako_del(kanako *yasa,u16 id);
 
 #endif
 

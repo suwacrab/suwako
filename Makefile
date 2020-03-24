@@ -1,7 +1,7 @@
 # compiler shit
 CC = gcc
 INCLUDE = -I. -I./src
-LIBS = -lm
+LIBS = -lm -lSDL
 # obj shit
 OBJS := src/main.o src/kanako.o
 NAME = pool.out
