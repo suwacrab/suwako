@@ -2,7 +2,7 @@
 #include "suwako.h"
 
 #ifndef KANAKO_H
-#define KANAKO__H
+#define KANAKO_H
 
 /*	--	obj yasas	--	*/
 typedef struct kanako 

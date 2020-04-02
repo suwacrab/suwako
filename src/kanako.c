@@ -17,12 +17,12 @@ kanako *kanako_init(kanako *yasa,suwako *objs,u16 len)
 		yasa->objs[i].stat.next = i+1;
 		yasa->objs[i].stat.mode = 0;
 	}
-	yasa->objs[len-1].stat.next = KANAKO_NULL;
+	yasa->objs[len-1].stat.next = SUWAKO_NULL;
 	return yasa;
 }
 suwako *kanako_add(kanako *yasa,u16 mode)
 {
-	if(yasa->first == KANAKO_NULL) return NULL;
+	if(yasa->first == SUWAKO_NULL) return NULL;
 	suwako *nobj = &yasa->objs[yasa->first];
 	nobj->stat.dead = false;
 	nobj->stat.mode = mode;
